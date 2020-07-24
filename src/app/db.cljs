@@ -3,31 +3,31 @@
 
 (def initial-app-db {:auth {:uid nil}
                      :errors {}
-                     :inboxes {:inbox-01 {:participants #{"mike@mailinator.com" "jade@mailinator.com"}
+                     :inboxes {:inbox-01 {:participants #{"achim@test.com" "notum@test.com"}
                                           :messages [{:message "first message"
-                                                      :author "mike@mailinator.com"
+                                                      :author "achim@test.com"
                                                       :created-at 1544614386378}
                                                      {:message "second message"
-                                                      :author "jade@mailinator.com"
+                                                      :author "notum@test.com"
                                                       :created-at 1544514356378}
                                                      {:message "third message"
-                                                      :author "mike@mailinator.com"
+                                                      :author "achim@test.com"
                                                       :created-at 1544414336378}
                                                      {:message "fourth message"
-                                                      :author "mike@mailinator.com"
+                                                      :author "achim@test.com"
                                                       :created-at 1544314316378}]}
-                               :inbox-02 {:participants #{"mike@mailinator.com" "mark@mailinator.com"}
+                               :inbox-02 {:participants #{"achim@test.com" "notum@test.com"}
                                           :messages [{:message "first message"
-                                                      :author "mike@mailinator.com"
+                                                      :author "achim@test.com"
                                                       :created-at 1544714386378}
                                                      {:message "second message"
-                                                      :author "mark@mailinator.com"
+                                                      :author "notum@test.com"
                                                       :created-at 1544614386378}
                                                      {:message "third message"
-                                                      :author "mike@mailinator.com"
+                                                      :author "achim@test.com"
                                                       :created-at 1544514386378}
                                                      {:message "fourth message"
-                                                      :author "mike@mailinator.com"
+                                                      :author "achim@test.com"
                                                       :created-at 1544414386378}]}}
                      :nav {:active-page :recipes
                            :active-nav :recipes
@@ -76,7 +76,7 @@
                                                 :step-05 {:id :step-05
                                                           :order 5
                                                           :desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras massa orci, imperdiet sit amet ultricies vitae, consectetur nec est. Proin laoreet odio elit, vel rutrum tortor finibus non. Etiam auctor lorem eget diam sollicitudin condimentum. Nam quis posuere diam. Nulla vel arcu ac eros vestibulum accumsan in quis eros."}}
-                                        :cook "mike@mailinator.com"
+                                        :cook "achim@test.com"
                                         :price 3900}
                                :rec-02 {:id :rec-02
                                         :prep-time 45
@@ -123,7 +123,7 @@
                                                 :step-05 {:id :step-05
                                                           :order 5
                                                           :desc "Fifth step"}}
-                                        :cook "mike@mailinator.com"
+                                        :cook "achim@test.com"
                                         :price 3400}
                                :rec-03 {:id :rec-03
                                         :prep-time 15
@@ -170,7 +170,7 @@
                                                 :step-05 {:id :step-05
                                                           :order 4
                                                           :desc "Serve hot with marmalaids, honey, syrup, peanut butter etc."}}
-                                        :cook "jade@mailinator.com"
+                                        :cook "notum@test.com"
                                         :price 1900}
                                :rec-04 {:id :rec-04
                                         :prep-time 15
@@ -205,7 +205,7 @@
                                                 :step-05 {:id :step-05
                                                           :order 5
                                                           :desc "Fifth step"}}
-                                        :cook "jade@mailinator.com"
+                                        :cook "notum@test.com"
                                         :price 2900}
                                :rec-05 {:id :rec-05
                                         :prep-time 15
@@ -249,42 +249,42 @@
                                                 :step-04 {:id :step-04
                                                           :order 4
                                                           :desc "Serve hot with marmalaids, honey, syrup, peanut butter etc."}}
-                                        :cook "jade@mailinator.com"
+                                        :cook "notum@test.com"
                                         :price 2900}}
-                     :users {"mike@mailinator.com" {:uid "mike@mailinator.com"
+                     :users {"achim@test.com" {:uid "achim@test.com"
                                                     :profile {:first-name "Mike"
                                                               :last-name "Jordan"
                                                               :img "https://res.cloudinary.com/schae/image/upload/f_auto,h_400,q_80/v1548196567/cheffy/mike.jpg"
-                                                              :email "mike@mailinator.com"
+                                                              :email "achim@test.com"
                                                               :password "password"}
                                                     :role :user
                                                     :saved #{}
-                                                    :inboxes {"jade@mailinator.com" {:id :inbox-01
+                                                    :inboxes {"notum@test.com" {:id :inbox-01
                                                                                      :updated-at 1538697210534
                                                                                      :notifications 3}
-                                                              "mark@mailinator.com" {:id :inbox-02
+                                                              "notum@test.com" {:id :inbox-02
                                                                                      :notifications 6
                                                                                      :updated-at 1538697210537}}}
-                             "jade@mailinator.com" {:uid "jade@mailinator.com"
+                             "notum@test.com" {:uid "notum@test.com"
                                                     :profile {:first-name "Jade"
                                                               :last-name "Miller"
                                                               :img "https://res.cloudinary.com/schae/image/upload/f_auto,q_80/v1548196567/cheffy/jade.jpg"
-                                                              :email "jade@mailinator.com"
+                                                              :email "notum@test.com"
                                                               :password "password"}
                                                     :role :user
                                                     :saved #{}
-                                                    :inboxes {"mike@mailinator.com" {:id :inbox-01
+                                                    :inboxes {"achim@test.com" {:id :inbox-01
                                                                                      :updated-at 1538697210534
                                                                                      :notifications 3}}}
-                             "mark@mailinator.com" {:uid "mark@mailinator.com"
+                             "notum@test.com" {:uid "notum@test.com"
                                                     :profile {:first-name "Mark"
                                                               :last-name "Slack"
                                                               :img "https://res.cloudinary.com/schae/image/upload/f_auto,q_80/v1548196567/cheffy/mark.jpg"
-                                                              :email "mark@mailinator.com"
+                                                              :email "notum@test.com"
                                                               :password "password"}
                                                     :role :user
                                                     :saved #{}
-                                                    :inboxes {"mike@mailinator.com" {:id :inbox-02
+                                                    :inboxes {"achim@test.com" {:id :inbox-02
                                                                                      :notifications 6
                                                                                      :updated-at 1538697210537}}}}})
 

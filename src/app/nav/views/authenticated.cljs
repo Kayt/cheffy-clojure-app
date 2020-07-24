@@ -5,7 +5,8 @@
 
 (defn authenticated
   []
-  (let [nav-items [{:id :saved
+  (let [active-nav @(rf/subscribe [:active-nav])
+        nav-items [{:id :saved
                     :name "Saved"
                     :href "#saved"
                     :dispatch #(rf/dispatch [:set-active-nav :saved])}
@@ -28,6 +29,11 @@
     [:> Box {:display "flex"
            :justify-content "flex-end"
            :py 1}
-   (for [item nav-items]
-     [nav-item item])]))
+   (for [{:keys [id name href dispatch]} nav-items]
+     [nav-item {:key id
+                :id id
+                :name name
+                :href href
+                :dispatch dispatch
+                :active-nav active-nav}])]))
   
